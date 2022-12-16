@@ -5,6 +5,11 @@ import '@fontsource/ibm-plex-sans'
 
 import NavBar from './components/NavigationBar.astro'
 import ImageBack from './components/image-back.astro'
+
+/* var filledImportant = false; */
+/* var checkForm => (e) => { */
+/*   console.log("Hello World!") */
+/* } */
 ---
 
 <html lang="en">
@@ -48,12 +53,13 @@ import ImageBack from './components/image-back.astro'
       if so, what?,
       link to the mod. -->
 
-      <form method="post" data-netlify="true">
-        <label>Minecraft IGN: <input type="text" name="mc-ign" id=""></label><br>
-        <label>Mod Name: <input type="text" name="mod-name" id=""></label><br>
+      <form method="post" data-netlify="true" name="implementMod">
+        <p><span style="color: red">*</span> Required</p>
+        <label>Minecraft IGN<span style="color: red">*</span>: <input type="text" name="mc-ign" required></label><br>
+        <label>Mod Name<span style="color: red">*</span>: <input type="text" name="mod-name" required></label><br>
         <label>
-          What is the mod type?: 
-          <select name="mod-type" id="">
+          What is the mod type?<span style="color: red">*</span>: 
+          <select name="mod-type" required>
             <option value="optimization">Optimization</option>
             <option value="qol">Quality of Life</option>
             <option value="vis-improvement">Visual Improvement</option>
@@ -63,22 +69,30 @@ import ImageBack from './components/image-back.astro'
         </label><br>
         <label>If 'other', what type is it?: <input type="text" name="other" id=""></label><br>
         <label>
-          Does the mod need dependencies?: 
-          <select name="dependencies" id="">
+          Does the mod need dependencies?<span style="color: red">*</span>: 
+          <select name="dependencies" required>
             <option value="yes">Yes</option>
             <option value="no">No</option>
           </select>
         </label><br>
         <label>If so, what are they (if more than one, seperate them with commas): <input type="text" name="yes-dependencies" id=""></label><br>
-        <label>Mod Link: <input type="url" name="mod-link" id=""></label><br>
-        <button type="submit">Submit!</button>
+        <label>Mod Link<span style="color: red">*</span>: <input type="url" name="mod-link" required></label><br>
+        <button type="submit" id="submit_button">Submit!</button>
       </form>
 
       <style>
+        label {
+          font-size: 18px; 
+        }
         button {
+          font-size: 19px;
           background-color: #99E1D9;
           border-width: 0;
           padding: 10px;
+        }
+        button:hover{
+          background-color: #51CDBE;
+          cursor: pointer;
         }
       </style>
       

@@ -1,0 +1,38 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans';
+}
+
+.main {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  line-height: 30px;
+}
+
+.main ul, .main ol {
+  margin-left: 25px;
+}
+
+h1, h3 {
+  text-align: center;
+  color: #141514;
+  margin: 30px;
+}
+
+h3 {
+  font-size: 150%;
+}
+
+.main a {
+  color: #56765B;
+}
+
+.question {
+  font-size: 110%;
+  font-weight: bold;
+  margin: 25px;
+  color: #222F24;
+}

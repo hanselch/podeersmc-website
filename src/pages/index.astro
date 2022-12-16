@@ -1,0 +1,119 @@
+---
+import './global.css'
+import '@fontsource/zen-dots'
+import '@fontsource/ibm-plex-sans'
+
+import NavBar from './components/NavigationBar.astro'
+import ImageBack from './components/image-back.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+
+    <NavBar />
+    <ImageBack image="https://store-images.s-microsoft.com/image/apps.2678.14492077886571533.a48e9a4a-99a7-44a9-9d97-9e8e72220a7c.6b98c506-61b7-4126-80b6-449f2ff0fb96?q=90&w=480&h=270" altext="main mc back" title="Welcome to the Offical Website of PondeersMC!" />
+
+    <div class="main">
+
+
+      <h3>About us.</h3>
+
+      <p>We are a small community of nerds who really love Mincraft, plain and simple! The server is run (and moderated) but both MJ (dosstress) and Hansel (tardiobscurus). Within the MC server, there are (technically) no rule, no set theme, not restriction, and alot of creackhead energy. If you think you are compatible of these ADHD indusing head aches, then ask either MJ or Hansel!</p>
+
+      <h3>Rules</h3>
+
+      <p>There are only 4 rules:</p>
+
+      <ol>
+        <li>Do not grief</li>
+        <li>Do not be a dickhead (unreciprocated bad mouth and related stuff)</li>
+        <li>Do not steal (unless the person doesn't mind with)</li>
+        <li>And just have fun!</li>
+      </ol>
+
+      <p>If you follow these rules, you will have a safe, accepting, and actual fun server!</p>
+
+      <h3>FAQ</h3>
+
+      <p class="question">How do I join the server?</p>
+
+      <p>To join, you MUST be invited by either MJ (dosstress) or Hansel (tardiobscurus) to have the IP address. It is a whitelisted server.</p>
+
+      <p class="question">What do I need when joining the server?</p>
+
+      <p>You must have these to be able to join</p>
+
+      <ol>
+        <li>Minecraft: Java Edition, no cracked MC such as Tlauncher or other similar.</li>
+        <li>Fabric API (check the 'Install Mods' tab on the navigation)</li>
+        <li>All the Fabric Mods listed (again, check the 'Install Mods')</li>
+
+      </ol>
+
+      <p class="question">What mods are included in the server and what do they do?</p>
+
+      <p>There are in total 18 mods that are required (including dependencies). Here are the mods:</p>
+
+      <p>Dependencies</p>
+      <ul>
+        <li><a href="https://modrinth.com/mod/modmenu" target="_blank">Mod Menu</a> - Adds a mod menu to view the list of mods you have installed.</li>
+        <li><a href="https://modrinth.com/mod/fabric-api" target="_blank">Fabric API</a> - Essential hooks for modding with Fabric.</li>
+        <li><a href="https://modrinth.com/mod/cloth-config/" target="_blank">Cloth Config API</a> - Configuration Library for Minecraft Mods</li>
+      </ul>
+
+      <p>Optimizations</p>
+      <ul>
+        <li><a href="https://modrinth.com/mod/sodium" target="_blank">Sodium</a> - Modern rendering engine and client-side optimization mod for Minecraft</li>
+        <li><a href="https://modrinth.com/mod/sodium-extra" target="_blank">Sodium Extra</a> - Features that shouldn't be in Sodium.</li>
+        <li><a href="https://modrinth.com/mod/reeses-sodium-options/" target="_blank">Reese's Sodium Options</a> - Alternative Options Menu for Sodium</li>
+        <li><a href="https://modrinth.com/mod/lithium" target="_blank">Lithium</a> - No-compromises game logic/server optimization mod</li>
+        <li><a href="https://modrinth.com/mod/exordium" target="_blank">Exordium</a> - Render the GUI and screens at a lower framerate to speed up what's really important: the worldrendering.</li>
+        <li><a href="https://modrinth.com/mod/ebe" target="_blank">Enhanced Block Enteties</a> - Reduce FPS lag with block entities, as well as customize them with resource packs</li>
+      </ul>
+
+      <p>General Mods</p>
+      <ul>
+        <li><a href="https://modrinth.com/mod/plasmo-voice" target="_blank">Plasmo Voice</a> - A proximity voice chat mod with audio positioning and lots of features</li>
+        <li><a href="https://modrinth.com/mod/chat-heads" target="_blank">Chat Heads</a> - See who you're chatting with!</li>
+        <li><a href="https://modrinth.com/mod/betterf3" target="_blank">Better F3</a> - Replaces Minecraft's original debug HUD with a highly customizable, more human-readable HUD.</li>
+        <li><a href="https://modrinth.com/mod/advancementinfo" target="_blank">AdvancementInfo</a> - Show more information about advancement requirements.</li>
+        <li><a href="https://modrinth.com/mod/eating-animation" target="_blank">Eating Animations</a> - A mod that adds sprite animations for edible and drinkable items.</li>
+        <li><a href="https://modrinth.com/mod/notebook" target="_blank">Vanilla Notebook</a> - A small vanilla-styled mod that adds a notebook into your GUI.</li>
+      </ul>
+
+      <p>Optional Mods; Mods that are not required cause of optimization issues or unnecessary need for the mod below.</p>
+      <ul>
+        <li><a href="https://modrinth.com/mod/visuality" target="_blank">Visuality</a> - Little visual improvements by adding a bunch of new particles.</li>
+        <li><a href="https://modrinth.com/mod/capes" target="_blank">Capes</a> - Lets you use capes from OptiFine, LabyMod and other cape mods</li>
+        <li><a href="https://modrinth.com/mod/replaymod" target="_blank">Replay Mod</a> - A Minecraft Mod to record, relive and share your experience.</li>
+      </ul>
+      
+      <p class="question">Why do I need these mods in the first place?</p>
+
+      <p>Mostly for optimization, but also to add some more quality of life stuff to make it more playable and helpful (they are vanilla friendly so there isn't any mods that will change the gameplay).</p>
+
+      <p class="question">What is the server running on?</p>
+
+      <p>The server is running on <a href="https://apexminecrafthosting.com/" target="_blank">Apex Hosting</a>. A very secure and affordable Mincraft server hosting client. Which supports mods and additional plugins (when needed).</p>
+
+      <p class="question">Do I need to pay the server? If so, why?</p>
+
+      <p>We are semi-required to have you pay your part of the server. Of course, we will be fair on the pricing and will be splitting it on the direct price by the amount of people</p>
+
+      <p>We will be using the <a href="https://apexminecrafthosting.com/pricing/?game=minecraft" target="_blank">4GB RAM Option</a> to run the server which is 14$. If there are (for example 7 people) we will divide the amount by the price (14 with tax) by the amount of people (7) you will pay your share <b>every month by the ..th of the month</b>.</p>
+
+      <p class="question">Well, what if I couldn't play the server by <i>x</i> amount of time?</p>
+
+      <p>If you won't be able to play the server by less than <b>2 weeks</b> of the month. You will not have the option to pay on that month. Of course you need to tell either MJ (dosstress) or Hansel (tardiobscurus) that you will not be able to play by the afformantioned time frame.</p>
+
+    </div>
+
+	</body>
+</html>

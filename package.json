@@ -1,0 +1,20 @@
+{
+  "name": "@example/minimal",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-sans": "^4.5.13",
+    "@fontsource/twinkle-star": "^4.5.9",
+    "@fontsource/zen-dots": "^4.5.8",
+    "astro": "^1.6.13",
+    "yarn": "^1.22.19"
+  }
+}

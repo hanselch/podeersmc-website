@@ -1,0 +1,93 @@
+---
+import './global.css'
+import '@fontsource/zen-dots'
+import '@fontsource/ibm-plex-sans'
+
+import NavBar from './components/NavigationBar.astro'
+import ImageBack from './components/image-back.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+
+    <NavBar />
+    <ImageBack image="/images/im-bg.png" altext="main mc back" title="Installing Fabric Mods" />
+
+    <div class="main">
+
+      <h1>Installing Fabric 101</h1>
+      <p>Installing fabric is pretty easy. After the tutorial, there will be a link to submit a mod you wanted to be implemented in the server! There will be more info about it.</p>
+
+      <p class="question">Pre-requisite</p>
+      <ul>
+        <li>Minecraft: Java Edition</li>
+      </ul>
+
+      <p class="question">What are the mods we are installing?</p>
+      <p>The home page of the website shows the list of mods needed in the server (with optional mods added).</p>
+
+      <h3>Installing</h3>
+      <p class="question">0. Install the fabric installer and the zip file.</p>
+
+      <p class="question">1. Installing fabric and adding mods</p>
+
+      <p class="question">2. Testing it out</p>
+
+      <!-- <p class="question">3. Troubleshooting</p> --> 
+
+      <h3>Submit your mod!</h3>
+      <p class="question">Fill below to request a mod!</p>
+      <!-- Here are the questions;
+      if so, what?,
+      link to the mod. -->
+
+      <form method="post" data-netlify="true">
+        <label>Minecraft IGN: <input type="text" name="mc-ign" id=""></label><br>
+        <label>Mod Name: <input type="text" name="mod-name" id=""></label><br>
+        <label>
+          What is the mod type?: 
+          <select name="mod-type" id="">
+            <option value="optimization">Optimization</option>
+            <option value="qol">Quality of Life</option>
+            <option value="vis-improvement">Visual Improvement</option>
+            <option value="general">General Vanilla Approvement</option>
+            <option value="other">Other</option>
+          </select>
+        </label><br>
+        <label>If 'other', what type is it?: <input type="text" name="other" id=""></label><br>
+        <label>
+          Does the mod need dependencies?: 
+          <select name="dependencies" id="">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </label><br>
+        <label>If so, what are they (if more than one, seperate them with commas): <input type="text" name="yes-dependencies" id=""></label><br>
+        <label>Mod Link: <input type="url" name="mod-link" id=""></label><br>
+        <button type="submit">Submit!</button>
+      </form>
+
+      <style>
+        button {
+          background-color: #99E1D9;
+          border-width: 0;
+          padding: 10px;
+        }
+      </style>
+      
+      <h3>Technical Difficulties?</h3>
+
+      <h3>Mod(s) Copyright</h3>
+
+    </div>
+
+
+  </body>
+</html>

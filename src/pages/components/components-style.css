@@ -1,0 +1,53 @@
+/* For navigation */
+
+nav {
+  z-index: 2;
+  top: 0;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+}
+nav ul {
+  background-color: #1E1F1E; 
+  list-style-type: none;
+  width: 100vw;
+  overflow: hidden;
+}
+
+li .nav-link, li .title {
+  color: white;
+  float: left;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+}
+
+li .title {
+  font-family: "Zen Dots";
+}
+
+li .nav-link:hover {
+  background-color: #A24936;
+}
+
+/* For back-drop */
+
+.back-drop {
+  background-color: black;
+  height: 92vh;
+}
+
+.back-drop img {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 50%;
+}
+
+.back-drop h1 {
+  position: absolute;
+  top: 45%;
+  z-index: 2;
+  color: white;
+}

@@ -2,6 +2,7 @@
 import './global.css'
 import '@fontsource/zen-dots'
 import '@fontsource/ibm-plex-sans'
+import '@fontsource/anonymous-pro'
 
 import NavBar from './components/NavigationBar.astro'
 import ImageBack from './components/image-back.astro'
@@ -26,7 +27,43 @@ import ImageBack from './components/image-back.astro'
     <ImageBack image="/images/im-bg.png" altext="main mc back" title="Installing Fabric Mods" />
 
     <div class="main">
-
+      <style>
+        code {
+          font-family: "Anonymous Pro", monospace;
+          background-color: #ebebeb;
+          border-radius: 5px;
+        }
+        label {
+          font-size: 18px; 
+        }
+        button {
+          font-size: 19px;
+          background-color: #99E1D9;
+          border-width: 0;
+          padding: 10px;
+        }
+        button:hover{
+          background-color: #51CDBE;
+          cursor: pointer;
+        }
+        /* for the zip button */
+        a.zip-button {
+          background-color: #F7567C;
+          padding: 15px;
+          color: #ffffff;
+          text-decoration: none;
+          margin: 0 15px;
+        }
+        a.zip-button:hover {
+          background-color: #F52958;
+        }
+        /* for images */
+        img {
+          width: 650px;
+          margin: 15px auto;
+          display: block;
+        }
+        </style>
       <h1>Installing Fabric 101</h1>
       <p>Installing fabric is pretty easy. After the tutorial, there will be a link to submit a mod you wanted to be implemented in the server! There will be more info about it.</p>
 
@@ -39,20 +76,67 @@ import ImageBack from './components/image-back.astro'
       <p>The home page of the website shows the list of mods needed in the server (with optional mods added).</p>
 
       <h3>Installing</h3>
+      <!-- 0. -->
       <p class="question">0. Install the fabric installer and the zip file.</p>
+      <p>Before anything, if you haven't played the recent 1.19.3 update, the Fabric Installer will pop up an error. Launch the game to the recent version and continue on.</p><br>
+      <p>Go to the offical <a href="https://fabricmc.net/use/installer/">Fabric website</a> to install the Fabric Installer. And click on the big blue button; it will have you install the installer.</p>
+      <img src="/images/install-mods-images/1-install-fabric.png">
+      <p>Now we need to install the mods that are dependent to the server. There are two zip files <b>necessary.zip</b> and <b>optional.zip</b>. Click below the buttons to install either one of them.</p>
+      <br>
+      <p>
+        <a href="/files/necessary.zip" class="zip-button">necessary.zip</a>
+        <a href="/files/optional.zip" class="zip-button">optional.zip</a>
+      </p>
+      <br>
+      <p>The next step we will to, actually, playing the fabric client.</p>
 
-      <p class="question">1. Installing fabric and adding mods</p>
+      <!-- 1. -->
+      <p class="question">1. Installing Fabric to the Minecraft Launcher</p>
+      <p>After the Fabric Installer is downloaded, open the file. It will show something like this:</p>
+      <!-- Image here -->
+      <img src="/images/install-mods-images/2.1-opening-fabric.png">
+      <p>It looks dawnting, but is not that complicated.</p>
+      <p>There are two options on top <code>client</code> and <code>server</code>. We are going to be on <code>client</code> (meaning we are installing the Fabric client to your personal computer). Then we will be doing the most recent version of the server which is <b>1.19.3</b>. Loader version is not important so don't worry about that.</p> <br>
+      <p>The last option is selecting your destination for the client to be at. What's on default will be enough so <b>don't touch that</b>.</p><br>
+      <p>Have 'create profile' as checked. Meaning that it will create a new client launch for Fabric itself.</p><br>
+      <p>And now click the 'Install' button. It should look something like this:</p>
+      <img src="/images/install-mods-images/2.2-opening-fabric.png">
+      <p>And it will pop-up this message when it's successfully installed into Minecraft:</p>
+      <img src="/images/install-mods-images/2.3-opening-fabric.png">
+      <p>Now open the Mincraft Launcher and will automatically select something like <code>fabric-loader-'version installed'</code> (bottom left shown the image below).</p>
+      <img src="/images/install-mods-images/2.4-opening-fabric.png">
+      <p>Press 'play' and when the game opens up the main menu. You can close the game.</p>
+      <p>Now it is time to implement the mods!</p>
 
-      <p class="question">2. Testing it out</p>
+      <!-- 2. -->
+      <p class="question">2. Adding the mods</p>
+      <p>You should have the zip file at this point. <b>This step will be demonstrated using <a href="https://www.win-rar.com/start.html?&L=0">WinRar</a></b>. So it will not be the same for everyone (if so, you can losely use this part to setup the mods folder.)</p>
+      <p>Open the zip file (or both if you want the optional, we will talk about it in a bit). I recommend to not unzip it. Since there is a much more faster way into transferring the items. The file with have the mods (image below):</p>
+      <img src="/images/install-mods-images/3.1-adding-mods.png">
+      <p>Now go to your <code>.minecraft</code> folder.</p>
+      <br>
+      <p>For Windows 10 and 11, do <b>Win + R</b> and when the <code>Run</code> program opens up, type <code>%appdata%</code> on the text input.</p>
+      <img src="/images/install-mods-images/3.2-adding-mods.png">
+      <p>It will automatically open the <code>AppData</code> folder (tl;dr, the folder with all the apps file). The <code>.minecraft</code> folder will be the first one on the list. And click on that folder.</p>
+      <br>
+      <p>For Mac OS open <b>Spotlight</b>, and type (mostly copy) this string in the search bar: <code>~/Library/Application Support/minecraft</code>. It will open up the mods folder.</p>
+      <img src="/images/install-mods-images/3.3-adding-mods.png">
+      <p>courtesy</p>
+      <br>
+      <p>Now that we are in the <code>.minecraft</code> (or just the <code>minecraft</code> folder in mac) check to see if the <code>mods</code> folder is in <code>.minecraft</code>. It should be added automatically when you've started a Minecraft game with the Fabric version. If not, just simply add the folder just exactly <code>mods</code>.</p>
+      <p>Now, have the zip file open and drag all the mods to the mods folder. It will automatically "unzip" the file and drag it to the <code>mods</code> folder.</p>
+      <p>If you have the <b>optional.zip</b> folder open. You can drag selected mods you think will be necessary for your needs.</p>
+      <!-- Image here -->
+      <br>
+      <p>And that's it!</p>
+
+      <p class="question">3. Troubleshooting</p>
+      <p>As of now, no known problem has established! Of course, if you have any issues contact tardiobscurus.</p>
 
       <!-- <p class="question">3. Troubleshooting</p> --> 
 
       <h3>Submit your mod!</h3>
       <p class="question">Fill below to request a mod!</p>
-      <!-- Here are the questions;
-      if so, what?,
-      link to the mod. -->
-
       <form method="post" data-netlify="true" name="implementMod">
         <p><span style="color: red">*</span> Required</p>
         <label>Minecraft IGN<span style="color: red">*</span>: <input type="text" name="mc-ign" required></label><br>
@@ -80,25 +164,6 @@ import ImageBack from './components/image-back.astro'
         <button type="submit" id="submit_button">Submit!</button>
       </form>
 
-      <style>
-        label {
-          font-size: 18px; 
-        }
-        button {
-          font-size: 19px;
-          background-color: #99E1D9;
-          border-width: 0;
-          padding: 10px;
-        }
-        button:hover{
-          background-color: #51CDBE;
-          cursor: pointer;
-        }
-      </style>
-      
-      <h3>Technical Difficulties?</h3>
-
-      <h3>Mod(s) Copyright</h3>
 
     </div>
 

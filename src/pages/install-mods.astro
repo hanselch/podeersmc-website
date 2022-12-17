@@ -19,7 +19,7 @@ import ImageBack from './components/image-back.astro'
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>PondeersMC | Install Mods</title>
 	</head>
 	<body>
 
@@ -28,10 +28,14 @@ import ImageBack from './components/image-back.astro'
 
     <div class="main">
       <style>
-        code {
+        code, pre {
           font-family: "Anonymous Pro", monospace;
           background-color: #ebebeb;
           border-radius: 5px;
+        }
+        pre {
+          padding: 5px;
+          margin: 5px 0;
         }
         label {
           font-size: 18px; 
@@ -90,6 +94,8 @@ import ImageBack from './components/image-back.astro'
       <br>
       <p>The next step we will to, actually, playing the fabric client.</p>
 
+      <hr>
+
       <!-- 1. -->
       <p class="question">1. Installing Fabric to the Minecraft Launcher</p>
       <p>After the Fabric Installer is downloaded, open the file. It will show something like this:</p>
@@ -107,6 +113,8 @@ import ImageBack from './components/image-back.astro'
       <img src="/images/install-mods-images/2.4-opening-fabric.png">
       <p>Press 'play' and when the game opens up the main menu. You can close the game.</p>
       <p>Now it is time to implement the mods!</p>
+
+      <hr>
 
       <!-- 2. -->
       <p class="question">2. Adding the mods</p>
@@ -127,14 +135,19 @@ import ImageBack from './components/image-back.astro'
       <p>Now, have the zip file open and drag all the mods to the mods folder. It will automatically "unzip" the file and drag it to the <code>mods</code> folder.</p>
       <img src="/images/install-mods-images/3.4-adding-mods.png">
       <p>If you have the <b>optional.zip</b> folder open. You can drag selected mods you think will be necessary for your needs.</p>
-      <!-- Image here -->
       <br>
       <p>And that's it!</p>
 
-      <p class="question">3. Troubleshooting</p>
-      <p>As of now, no known problem has established! Of course, if you have any issues contact tardiobscurus.</p>
+      <hr>
 
-      <!-- <p class="question">3. Troubleshooting</p> --> 
+      <p class="question">3. Troubleshooting</p>
+      <p>If you every experience any of these crash errors:</p>
+      <pre>
+java.lang.RuntimeException
+java.lang.AbstractMethodError</pre>
+      <p>It means that <b>you are not in the correct version</b>. Make sure you have installed the correct version of Fabric. The server is on version <b>1.19.3</b>.</p>
+
+      <hr>
 
       <h3>Submit your mod!</h3>
       <p class="question">Fill below to request a mod!</p>

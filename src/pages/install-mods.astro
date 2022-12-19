@@ -101,7 +101,8 @@ import ImageBack from './components/image-back.astro'
       <p>After the Fabric Installer is downloaded, open the file. It will show something like this:</p>
       <!-- Image here -->
       <img src="/images/install-mods-images/2.1-opening-fabric.png">
-      <p>It looks dawnting, but is not that complicated.</p>
+      <p>If your in Mac and popped that the file doesn't have a Creator ID, click <a href="#creator-id-warning">here</a></p>
+      
       <p>There are two options on top <code>client</code> and <code>server</code>. We are going to be on <code>client</code> (meaning we are installing the Fabric client to your personal computer). Then we will be doing the most recent version of the server which is <b>1.19.3</b>. Loader version is not important so don't worry about that.</p> <br>
       <p>The last option is selecting your destination for the client to be at. What's on default will be enough so <b>don't touch that</b>.</p><br>
       <p>Have 'create profile' as checked. Meaning that it will create a new client launch for Fabric itself.</p><br>
@@ -146,6 +147,20 @@ import ImageBack from './components/image-back.astro'
 java.lang.RuntimeException
 java.lang.AbstractMethodError</pre>
       <p>It means that <b>you are not in the correct version</b>. Make sure you have installed the correct version of Fabric. The server is on version <b>1.19.3</b>.</p>
+
+      <hr style="background-color: #cfcfcf">
+
+      <a name="creator-id-warning"></a>
+      <p><b>For Mac users</b>, if you open up the download file of the Fabric Installer. It will have a pop-up of a warning saying something about a 'Creator ID' or something similar. Here is a simple way to do this (thanks to <a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">Apple Support</a>).</p> 
+      <br>
+      <p>It is assumed you have the Java client installed.</p>
+      <ol>
+        <li>Go to the folder that has the Fabric Installer file.</li>
+        <li><b>Ctrl + Click</b> and hold it to you see the '<b>Open with...</b>'</li>
+        <li>And select the <b>Java Application</b> option.</li>
+        <li>It will worn you that you are opening a file that does not have a creator ID. There should be a button that say '<b>Open</b>' which it will force open the file.</li>
+        <li>Now you can continue on step 1.</li>
+      </ol>
 
       <hr>
 

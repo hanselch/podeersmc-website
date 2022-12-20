@@ -30,6 +30,58 @@ li .nav-link:hover {
   background-color: #A24936;
 }
 
+/* for mobile */
+nav {
+  position: fixed;
+  width: 100%;
+}
+
+#hamburger {
+  height: 30px;
+  margin: 12.5px 0;
+  margin-right: 10px;
+  float: right;
+}
+
+#hamburger:hover {
+  cursor: pointer;
+}
+
+#navigationPanel {
+  background-color: #1E1F1E;
+  height: 100vh;
+  position: sticky;
+  top: 57.75px;
+  z-index: 2;
+  /* transform: translateY(-150vh); */
+  transform: translateY(-0vh);
+}
+
+#navigationPanel p {
+  width: 100%;
+}
+
+#navigationPanel a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  background-color: #A24936;
+  width: auto;
+}
+
+#navigationPanel.animation {
+  /* animation: showPanel 1s ease-out forwards; */
+}
+
+@keyframes showPanel {
+  0% {
+    transform: translateY(-150vh);
+  } 100% {
+    transform: translateY(0vh);
+  }
+}
+
 /* For back-drop */
 
 .back-drop {
@@ -38,7 +90,7 @@ li .nav-link:hover {
 }
 
 .back-drop img {
-  z-index: 1;
+  z-index: 0;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -48,6 +100,6 @@ li .nav-link:hover {
 .back-drop h1 {
   position: absolute;
   top: 45%;
-  z-index: 2;
+  z-index: 1;
   color: white;
 }

@@ -17,21 +17,17 @@ var isMobile = false;
       </div>
       <!-- For mobile -->
       <div id="normalMobile">
-        <div id="showAllNavigation" onclick="test"><img id="hamburger" src="/svgs/bars-solid.svg"></div>
-        
+        <div id="showAllNavigation"><img id="hamburger" src="/svgs/bars-solid.svg"></div>
       </div>
     </div>
   </ul>
 </nav>
-<!--
 <div id="navigationPanel" class="animation">
-  <p><a href="/" class="panel-link">Home</a><br>
-</p>
+  <p><a href="/" class="panel-link">Home</a></p>
     <a href="/server-map/" class="panel-link">Server Map</a><br>
   <a href="/install-mods/" class="panel-link">Install Mods</a><br>
   <a href="/discord/" class="panel-link">Discord</a><br>
 </div>
--->
 
 <script define:vars={{ isMobile }}>
 // all navbar-tyoes
@@ -42,7 +38,6 @@ let client_isMobile = isMobile
 if (window.innerWidth < 732) {
   client_isMobile = true;
 }
-console.log(client_isMobile)
 
 if (client_isMobile == true) {
   normalDesktop.style.display = "none";
@@ -51,5 +46,22 @@ if (client_isMobile == true) {
   normalDesktop.style.display = "block";
   normalMobile.style.display = "none"
 }
+
+let showAllNavigation = document.getElementById("showAllNavigation");
+let navigationPanel = document.getElementById("navigationPanel");
+let hamburger = document.getElementById("hamburger")
+let naviagtionOn = false
+
+showAllNavigation.addEventListener("click", () => {
+  if (naviagtionOn == false) {
+    navigationPanel.style.animation = "showPanel 1s ease-out forwards";
+    hamburger.src = "/svgs/xmark-solid.svg";
+    naviagtionOn = true;
+  } else {
+    navigationPanel.style.animation = "closePanel 1s ease-in forwards";
+    hamburger.src = "/svgs/bars-solid.svg";
+    naviagtionOn = false;
+  }
+});
 </script>
 

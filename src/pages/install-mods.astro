@@ -17,7 +17,7 @@ import ImageBack from './components/image-back.astro'
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
 		<title>PondeersMC | Install Mods</title>
 	</head>
@@ -67,6 +67,12 @@ import ImageBack from './components/image-back.astro'
           margin: 15px auto;
           display: block;
         }
+        @media only screen and (max-width: 732px) {
+          img{
+            width: 100% 
+          }
+        }
+
         </style>
       <h1>Installing Fabric 101</h1>
       <p>Installing fabric is pretty easy. After the tutorial, there will be a link to submit a mod you wanted to be implemented in the server! There will be more info about it.</p>

@@ -11,21 +11,89 @@ import ImageBack from './components/image-back.astro'
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
 		<title>PondeersMC | Server Map</title>
 	</head>
 	<body>
 
     <NavBar />
-    <ImageBack image="https://store-images.s-microsoft.com/image/apps.2678.14492077886571533.a48e9a4a-99a7-44a9-9d97-9e8e72220a7c.6b98c506-61b7-4126-80b6-449f2ff0fb96?q=90&w=480&h=270" altext="main mc back" title="The Server Map" />
+    <ImageBack image="/images/image-background/server-map-bg.png" altext="main mc back" title="The Server Map" />
+
+    <div class="map">
+      <div class="form" style="margin: 0 auto">
+        <label for="maps-view">Select a date to see a specific map:</label>
+        <select name="maps-view" id="map-date">
+          <option value="12_22_22" selected>Map: 12/22/2022</option>
+        </select>
+        <button type="submit" id="showMap">Go!</button>
+      </div>
+      <iframe src="/server-maps/12.22.22/index.html" style="border: 1px dashed black;" id="mapLink"></iframe>
+      <span style="font-size: 10px">(c) <a href="https://unmined.net/">uNmINeD</a> by Balázs Farkas (“megasys”).</span>
+    </div>
 
     <div class="main">
-
-      <p style="font-size: 140px; color: red; padding: 115px; text-align: center">WIP</p>
-      <p style="text-align: center">Well we need the map no???</p>
-
+      <p style="text-align: center;">
+      The map will be updated every <b>7 days</b>! The next map update will be at <b>12/29</b>.
+      </p> 
+      <hr>
+      <h2>Request your location be set on the map!</h2>
+      <form method="post" data-netlify="true" name="requestLocation">
+        <p><span style="color: red">*</span> Required</p>
+        <label>Minecraft IGN<span style="color: red">*</span>: <input type="text" name="mc-ign" required></label><br>
+        <label>Location coords (x, z)<span style="color: red">*</span>: <input type="text" name="coords" required></label><br>
+        <label>Name of location you prefer: <input type="text" name="preferredName"></label><br>
+        <button type="submit" id="submit_button">Submit!</button>
+      </form>
     </div>
+<script>
+  // TODO: After making the next map update, do the form
+  const mapLinks = [
+    '/server-maps/12.22.22/index.html'
+  ];
+  var mapLink = document.getElementById("mapLink");
+  // deafult value
+  mapLink.src = mapLinks[0]
+</script>
+<style>
+  .form {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .form select {
+    padding: 8px;
+  }
+  #showMap {
+    font-size: 18px;
+    padding: 7px 15px;
+    border: none;
+    background: #F7567C;
+  }
+  #showMap:hover {
+    background: #F52958; 
+    cursor: pointer;
+  }
+
+  .map {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .map iframe {
+    width: 100%;
+    height: 80vh
+  }
+  button#submit_button {
+    font-size: 14px;
+    background-color: #99E1D9;
+    border-width: 0;
+    padding: 10px;
+  }
+  button#submit_button:hover{
+    background-color: #51CDBE;
+    cursor: pointer;
+  }
+</style>
 
 	</body>
 </html>

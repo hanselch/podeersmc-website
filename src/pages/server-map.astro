@@ -24,9 +24,9 @@ import ImageBack from './components/image-back.astro'
       <div class="form" style="margin: 0 auto">
         <label for="maps-view">Select a date to see a specific map:</label>
         <select name="maps-view" id="map-date">
-          <option value="12_22_22" selected>Map: 12/22/2022</option>
+          <option value=0 selected>Map: 12/22/2022</option>
         </select>
-        <button type="submit" id="showMap">Go!</button>
+        <button id="showMap">Go!</button>
       </div>
       <iframe src="/server-maps/12.22.22/index.html" style="border: 1px dashed black;" id="mapLink"></iframe>
       <span style="font-size: 10px">(c) <a href="https://unmined.net/">uNmINeD</a> by Balázs Farkas (“megasys”).</span>
@@ -46,15 +46,7 @@ import ImageBack from './components/image-back.astro'
         <button type="submit" id="submit_button">Submit!</button>
       </form>
     </div>
-<script>
-  // TODO: After making the next map update, do the form
-  const mapLinks = [
-    '/server-maps/12.22.22/index.html'
-  ];
-  var mapLink = document.getElementById("mapLink");
-  // deafult value
-  mapLink.src = mapLinks[0]
-</script>
+<script src="/scripts/serverMapJs.js" is:inline></script>
 <style>
   .form {
     font-size: 20px;

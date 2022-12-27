@@ -25,7 +25,12 @@ import ImageBack from './components/image-back.astro'
 
       <h3>About us.</h3>
 
-      <p>We are a small community of nerds who really love Mincraft, plain and simple! The server is run (and moderated) but both MJ (dosstress) and Hansel (tardiobscurus). Within the MC server, there are (technically) no rule, no set theme, not restriction, and alot of creackhead energy. If you think you are compatible of these ADHD indusing head aches, then ask either MJ or Hansel!</p>
+      <p>
+      We are a small community of nerds who really love Mincraft, plain and simple! The server is run (and moderated) but both MJ (dosstress) and Hansel (tardiobscurus). Within the MC server, there are (technically) no rule, no set theme, not restriction, and alot of creackhead energy. If you think you are compatible of these ADHD indusing head aches, then ask either MJ or Hansel!
+      <br>
+      <br>
+      The server is semi-vanilla. Which means that we are recommending you to implement mods. Of course it is not required. But we do recommend implemeting them not only for quality of life stuff; but for optimization as well!
+      </p>
 
       <hr>
 
@@ -63,9 +68,9 @@ import ImageBack from './components/image-back.astro'
 
       <p class="question">What mods are included in the server and what do they do?</p>
 
-      <p>There are in total 19 mods that are required (including dependencies). Here are the mods:</p>
-
-      <p>Dependencies</p>
+      <p>There are in total (including dependencies) 30 mods that are recommend . Here are the mods:</p>
+      <br>
+      <p><b>Dependencies</b></p>
       <ul>
         <li><a href="https://modrinth.com/mod/modmenu" target="_blank">Mod Menu</a> - Adds a mod menu to view the list of mods you have installed.</li>
         <li><a href="https://modrinth.com/mod/fabric-api" target="_blank">Fabric API</a> - Essential hooks for modding with Fabric.</li>
@@ -73,9 +78,10 @@ import ImageBack from './components/image-back.astro'
         <li><a href="https://modrinth.com/mod/fabric-language-kotlin" target="_blank">Fabric Language Kotlin</a> - This is a mod that enables usage of the Kotlin programming language for Fabric mods.</li>
         <li><a href="https://github.com/isXander/yetanotherconfiglib" target="_blank">YetAnotherConfigLib</a> - A builder-based configuration library for Minecraft.</li>
         <li><a href="https://beta.curseforge.com/minecraft/mc-mods/creativecore" target="_blank">CreativeCore</a> - Nothing else than a simple core mod required by most of CreativeMD's mods.</li>
+        <li><a href="https://modrinth.com/mod/collective" target="_blank">Collective</a> - 🎓 Collective is a shared library with common code for all of Serilum's mods</li>
       </ul>
 
-      <p>Optimizations</p>
+      <p><b>Optimizations</b></p>
       <ul>
         <li><a href="https://modrinth.com/mod/sodium" target="_blank">Sodium</a> - Modern rendering engine and client-side optimization mod for Minecraft</li>
         <li><a href="https://modrinth.com/mod/sodium-extra" target="_blank">Sodium Extra</a> - Features that shouldn't be in Sodium.</li>
@@ -86,7 +92,7 @@ import ImageBack from './components/image-back.astro'
         <li><a href="https://modrinth.com/mod/krypton" target="_blank">Krypton</a> - A mod to optimize the Minecraft networking stack</li>
       </ul>
 
-      <p>Quality of Life</p>
+      <p><b>Quality of Life</b></p>
       <ul>
         <li><a href="https://modrinth.com/mod/betterf3" target="_blank">Better F3</a> - Replaces Minecraft's original debug HUD with a highly customizable, more human-readable HUD.</li>
         <li><a href="https://modrinth.com/mod/advancementinfo" target="_blank">AdvancementInfo</a> - Show more information about advancement requirements.</li>
@@ -94,23 +100,27 @@ import ImageBack from './components/image-back.astro'
         <li><a href="https://beta.curseforge.com/minecraft/mc-mods/fabrizoom" target="_blank">FabriZoom</a> - This mod adds a zoom key (default c) that allows the user to zoom in their view.</li>
         <li><a href="https://beta.curseforge.com/minecraft/mc-mods/mouse-tweaks" target="_blank">Mouse Tweaks</a> - Enhances inventory management by adding various functions to the mouse buttons.</li>
         <li><a href="https://beta.curseforge.com/minecraft/mc-mods/thorium" target="_blank">Thorium</a> - Fixes 50+ small bugs and annoyances in Minecraft, without affecting gameplay mechanics.</li>
+        <li><a href="https://modrinth.com/mod/tree-harvester" target="_blank">Tree Harvester</a> - 🌲 Harvest full trees and huge mushrooms instantly with an axe. Includes fast leaf decay and sapling placement.</li>
       </ul>
 
-      <p>General Mods</p>
+      <p><b>General Mods</b></p>
       <ul>
         <li><a href="https://modrinth.com/mod/plasmo-voice" target="_blank">Plasmo Voice</a> - A proximity voice chat mod with audio positioning and lots of features</li>
         <li><a href="https://modrinth.com/mod/chat-heads" target="_blank">Chat Heads</a> - See who you're chatting with!</li>
         <li><a href="https://beta.curseforge.com/minecraft/mc-mods/ambientsounds" target="_blank">AmbientSounds 5</a> - Adds a rich ambience to the minecraft world.</li>
         <li><a href="https://beta.curseforge.com/minecraft/mc-mods/presence-footsteps" target="_blank">Presence Footsteps</a> - An overly complicated sound mod.</li>
         <li><a href="https://beta.curseforge.com/minecraft/mc-mods/sound-physics-remastered/" target="_blank">Sound Physics Remastered</a> - A Minecraft mod that provides realistic sound attenuation, reverberation, and absorption through blocks.</li>
+        <li><a href="https://modrinth.com/mod/stendhal" target="_blank">Stendhal</a> - Offering new and enhanced visual utilities for books, signs, anvil and the in-game chat.</li>
       </ul>
 
-      <p>Optional Mods; Mods that are not required cause of optimization issues or unnecessary need for the mod below.</p>
+      <p><b>Optional Mods</b>; Mods that are not required cause of optimization issues or unnecessary need for the mod below.</p>
       <ul>
         <li><a href="https://modrinth.com/mod/visuality" target="_blank">Visuality</a> - Little visual improvements by adding a bunch of new particles.</li>
         <li><a href="https://modrinth.com/mod/capes" target="_blank">Capes</a> - Lets you use capes from OptiFine, LabyMod and other cape mods</li>
         <li><a href="https://modrinth.com/mod/replaymod" target="_blank">Replay Mod</a> - A Minecraft Mod to record, relive and share your experience.</li>
       </ul>
+      <br>
+      <p>If you want to see the added, removed, changed, and other mod logs. Click <a href="/mod_versions/">here</a>!</p>
       
       <p class="question">Why do I need these mods in the first place?</p>
 

@@ -43,8 +43,8 @@ import ImageBack from './components/image-back.astro'
 
       <h4>First time installing mods</h4>
 
-      <button class="tapShow" id="tapShow">Manual installation</button>
-      <div class="shownContent">
+      <details class="tapShow">
+        <summary>Manual installation</summary>
         <!-- 0. -->
         <p class="question">0. Install the fabric installer and the zip file.</p>
         <p>Before anything, if you haven't played the recent 1.19.3 update, the Fabric Installer will pop up an error. Launch the game to the recent version and continue on.</p><br>
@@ -53,21 +53,20 @@ import ImageBack from './components/image-back.astro'
         <p>Now we need to install the mods that are dependent to the server. There are two zip files <b>necessary.zip</b> and <b>optional.zip</b>. Click below the buttons to install either one of them.</p>
         <br>
         <p>
-          <a href="https://mega.nz/file/jJhjXbzD#b48aLH_lGhYfEmmfZfOjclmm5Srifx92ZSDBgwxKVC8" class="zip-button">necessary.zip</a>
-          <a href="https://mega.nz/file/OUA1QCwQ#7vl6Q28bSaRuDq5LpijVaYOjPDvOTbVgKnV4bx57Zpw" class="zip-button">optional.zip</a>
+        <a href="https://mega.nz/file/jJhjXbzD#b48aLH_lGhYfEmmfZfOjclmm5Srifx92ZSDBgwxKVC8" class="zip-button">necessary.zip</a>
+        <a href="https://mega.nz/file/OUA1QCwQ#7vl6Q28bSaRuDq5LpijVaYOjPDvOTbVgKnV4bx57Zpw" class="zip-button">optional.zip</a>
         </p>
         <br>
         <p>The next step we will to, actually, playing the fabric client.</p>
 
         <hr>
-
         <!-- 1. -->
         <p class="question">1. Installing Fabric to the Minecraft Launcher</p>
         <p>After the Fabric Installer is downloaded, open the file. It will show something like this:</p>
         <!-- Image here -->
         <img src="/images/install-mods-images/2.1-opening-fabric.png">
         <p>If your in Mac and popped that the file doesn't have a Creator ID, click <a href="#creator-id-warning">here</a></p>
-        
+
         <p>There are two options on top <code>client</code> and <code>server</code>. We are going to be on <code>client</code> (meaning we are installing the Fabric client to your personal computer). Then we will be doing the most recent version of the server which is <b>1.19.3</b>. Loader version is not important so don't worry about that.</p> <br>
         <p>The last option is selecting your destination for the client to be at. What's on default will be enough so <b>don't touch that</b>.</p><br>
         <p>Have 'create profile' as checked. Meaning that it will create a new client launch for Fabric itself.</p><br>
@@ -109,7 +108,7 @@ import ImageBack from './components/image-back.astro'
         <p class="question">3. Troubleshooting</p>
         <p>If you every experience any of these crash errors:</p>
         <pre>
-  java.lang.RuntimeException
+         java.lang.RuntimeException
   java.lang.AbstractMethodError</pre>
         <p>It means that <b>you are not in the correct version</b>. Make sure you have installed the correct version of Fabric. The server is on version <b>1.19.3</b>.</p>
 
@@ -126,33 +125,33 @@ import ImageBack from './components/image-back.astro'
           <li>It will worn you that you are opening a file that does not have a creator ID. There should be a button that say '<b>Open</b>' which it will force open the file.</li>
           <li>Now you can continue on step 1.</li>
         </ol>
-      </div>
-      <button class="tapShow" id="tapShow">With CurseForge</button>
-      <div class="shownContent">
+      </details>
+
+      <details class="tapShow">
+        <summary>With CurseForge</summary>
         <p>WIP</p>
-      </div>
+      </details>
 
       <h4>Adding updated mods</h4>
-      <button class="tapShow" id="tapShow">Manual installation</button>
-      <div class="shownContent">
+      <details class="tapShow">
+        <summary>Manual Installation</summary>
         <p>Just simply follow step 2 under the <b>First time installing mods</b>. Which is simply installing the mods from the <code>necessary.zip</code>/<code>optional.zip</code> file and dragging it to the <code>mods</code> file.</p>
         <p>Simply install the zip file below (either one that has been officially updated),</p>
         <br>
         <p>
-          <a href="https://mega.nz/file/jJhjXbzD#b48aLH_lGhYfEmmfZfOjclmm5Srifx92ZSDBgwxKVC8" class="zip-button">necessary.zip</a>
-          <a href="https://mega.nz/file/OUA1QCwQ#7vl6Q28bSaRuDq5LpijVaYOjPDvOTbVgKnV4bx57Zpw" class="zip-button">optional.zip</a>
+        <a href="https://mega.nz/file/jJhjXbzD#b48aLH_lGhYfEmmfZfOjclmm5Srifx92ZSDBgwxKVC8" class="zip-button">necessary.zip</a>
+        <a href="https://mega.nz/file/OUA1QCwQ#7vl6Q28bSaRuDq5LpijVaYOjPDvOTbVgKnV4bx57Zpw" class="zip-button">optional.zip</a>
         </p>
         <br>
         <p>Open the zip file and drag it to the <code>mods</code> file. It will pop-up that there will be some files that might be duplicated. Simply click <b>Skip these files</b> (the second option).</p>
         <img src="/images/install-mods-images/1.1-exmaple-of-many-files-added.png" alt="">
         <p>And that is it!</p>
-      </div>
-      <button class="tapShow" id="tapShow">With CurseForge</button>
-      <div class="shownContent">
-        <p>WIP</p>
-      </div>
+      </details>
 
-      <script src="/scripts/installModsJs.js" is:inline></script>
+      <details class="tapShow">
+        <summary>With CurseForge</summary>
+        <p>WIP</p>
+      </details>
 
       <hr>
 

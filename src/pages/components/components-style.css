@@ -44,7 +44,7 @@ li .nav-link:hover {
 #navigationPanel {
   background-color: #1E1F1E;
   padding: 20px;
-  height: 89vh;
+  height: 90vh;
   width: 100%;
   position: fixed;
   /* bottom: 0; */

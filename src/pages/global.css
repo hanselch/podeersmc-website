@@ -57,7 +57,6 @@ h3 {
 
 .tapShow:hover {
   background: #e0e0e0;
-  cursor: pointer;
 }
 
 .tapShow summary {
@@ -131,4 +130,25 @@ img[src^="/images/install-mods-images/"] {
   img[src^="/images/install-mods-images/"]{
     width: 100% 
   }
+}
+
+/* For FAQ page */
+
+.faq {
+  background-color: #ffffff;
+  margin: 10px 0;
+}
+.faq > summary {
+  max-width: 100%;
+  background-color: #efefef;
+  padding: 10px;
+  border: none;
+}
+
+.faq > summary:hover {
+  background-color: #cfcfcf;
+}
+
+.faq-details {
+  padding: 10px
 }

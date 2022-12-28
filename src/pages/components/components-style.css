@@ -47,7 +47,7 @@ li .nav-link:hover {
   height: 89vh;
   width: 100%;
   position: fixed;
-  bottom: 0;
+  /* bottom: 0; */
   z-index: 2;
   transform: translateY(-150vh);
 }

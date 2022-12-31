@@ -19,38 +19,48 @@ Marker format:
 
 UnminedCustomMarkers = {
 
-    isEnabled: false,
+    isEnabled: true,
 
     markers: [
-        // spawn
+        // spawn portal: 25, -53
         {
-          x: 153,
-          z: -392,
-          text: "Spawn", 
+          x: 28,
+          z: -53,
+          text: "To\nSpawn Peninsula", 
           textColor: "yellow", 
           offsetX: 0,
           offsetY: 0, 
-          font: "bold 25px Calibri,sans serif",
+          font: "bold 15px Calibri,sans serif",
         },
-        // tardiobscurus' place
+        // tardiobscurus' portal: 5, -119
         {
-          x: 43,
-          z: -1005,
-          text: "tardi's",
+          x: 5,
+          z: -119,
+          text: "To\nSpise",
           textColor: "yellow",
           offsetX: 0,
           offsetY: 0,
-          font: "bold 20px Calibri,sans serif",
+          font: "bold 15px Calibri,sans serif",
         },
-        // monodin0's place
+        // monodin0's portal: 121, -227
         {
-          x: 933,
-          z: -1788,
-          text: "MonoDin0's",
+          x: 121,
+          z: -227,
+          text: "To\nMonoDin0's",
           textColor: "yellow",
           offsetX: 0,
           offsetY: 0,
-          font: "bold 20px Calibri,sans serif",
+          font: "bold 15px Calibri,sans serif",
+        },
+        // to mesa biome -493, -428
+        {
+          x: -493,
+          z: -428,
+          text: "To\nMesa Biome",
+          textColor: "yellow",
+          offsetX: 0,
+          offsetY: 0,
+          font: "bold 15px Calibri,sans serif",
         }
       ] 
 }

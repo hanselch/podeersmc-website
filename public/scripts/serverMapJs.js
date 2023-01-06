@@ -17,10 +17,15 @@ mapLink.src = `/server-maps/${getMapDate.value}/overworld/index.html`
 showMap.addEventListener("click", () => {
   var getMapDate = document.getElementById("map-date");
   var getDimension = document.getElementById("dimension");
+  //temp = ""
 
   if (getDimension.value == "overworld") {
     mapLink.src = `/server-maps/${getMapDate.value}/overworld/index.html`
   } else if (getDimension.value == "nether") {
-    mapLink.src = `/server-maps/${getMapDate.value}/nether/index.html`
+    if (getMapDate.value == "01.05.23") {
+      mapLink.src = `/server-maps/12.29.22/nether/index.html`
+    } else {
+      mapLink.src = `/server-maps/${getMapDate.value}/nether/index.html`
+    }
   }
 })

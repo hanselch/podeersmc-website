@@ -132,6 +132,31 @@ img[src^="/images/install-mods-images/"] {
   }
 }
 
+/* For Mods Changelog */
+.legend {
+  background: none;
+  font-size: 17px;
+}
+.version {
+  max-width: 800px;
+  overflow-x: auto;
+}
+
+
+
+.version > .details {
+  font-weight: bold;
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 700;
+}
+
+.new::before {
+  content: "NEW!!!";
+  color: red;
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 700;
+}
+
 /* For FAQ page */
 
 .faq {

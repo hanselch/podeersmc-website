@@ -4,6 +4,10 @@
 //  Getting the iFrame link
 var mapLink = document.getElementById("mapLink");
 //  Setting up the link to the maps
+var unChangeNether = [
+  "01.05.23",
+  "01.12.23",
+]
 
 // Get the value
 //   get "submit" button
@@ -17,12 +21,11 @@ mapLink.src = `/server-maps/${getMapDate.value}/overworld/index.html`
 showMap.addEventListener("click", () => {
   var getMapDate = document.getElementById("map-date");
   var getDimension = document.getElementById("dimension");
-  //temp = ""
 
   if (getDimension.value == "overworld") {
     mapLink.src = `/server-maps/${getMapDate.value}/overworld/index.html`
   } else if (getDimension.value == "nether") {
-    if (getMapDate.value == "01.05.23") {
+    if (!(getMapDate.value in unChangeNether)) {
       mapLink.src = `/server-maps/12.29.22/nether/index.html`
     } else {
       mapLink.src = `/server-maps/${getMapDate.value}/nether/index.html`

@@ -6,6 +6,18 @@ import './components-style.css'
 ---
 
 <div class="back-drop">
-  <img src={image} alt={altext}>
+  <img src={image} alt={altext} id="backimage">
   <h1>{title}</h1>
 </div>
+
+<!---
+<script>
+  var backimage = document.getElementById("backimage");
+  window.addEventListener("scroll", () => {
+    var scrollWindow = window.scrollY;
+    var parallaxMath = scrollWindow * .6;
+    console.log(parallaxMath)
+    backimage.style.transform = `translateY(${parallaxMath}px)`
+  });
+</script>
+--->

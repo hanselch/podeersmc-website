@@ -44,7 +44,7 @@ UnminedCustomMarkers = {
             // Hjerte Mountain
         {
           x: -71, z: -792,
-          text: "Hjerte Mountain",
+          text: "Hjerte\nMountain",
           textColor: "green",
           offsetX: 0,
           offsetY: 0,

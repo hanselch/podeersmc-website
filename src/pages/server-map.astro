@@ -21,36 +21,15 @@ import ImageBack from './components/image-back.astro'
     <ImageBack image="/images/image-background/server-map-bg.png" altext="main mc back" title="The Server Map" />
 
     <div class="map">
-      <div class="form" style="margin: 0 auto">
-        <label for="maps-view">Select a date to see a specific map:</label>
-        <select name="maps-view" id="map-date">
-          <option value="01.12.23" selected>Map: 01/12/2022</option>
-          <option value="01.05.23">Map: 01/05/2022</option>
-          <option value="12.29.22">Map: 12/29/2022</option>
-          <option value="12.22.22">Map: 12/22/2022</option>
-        </select>
-        <label for="maps-view">Select dimension: </label>
-        <select name="dimension-view" id="dimension">
-          <option value="overworld" selected>Overworld</option>
-          <option value="nether">Nether</option>
-        </select>
-        <button id="showMap">Go!</button>
-      </div>
-      <iframe src="" style="border: 1px dashed black;" id="mapLink"></iframe>
-      <span style="font-size: 10px">(c) <a href="https://unmined.net/">uNmINeD</a> by Balázs Farkas (“megasys”).</span>
+      <iframe src="http://37.10.122.49:8100/#overworld:0:50:0:128:0:0:0:0:perspective" style="border: 1px solid black;"></iframe></iframe> 
     </div>
 
     <div class="main">
-      <p style="text-align: center;">
-      The map will be updated every <b>7 days</b>! The next map update will be at <b>1/19</b>.
-      </p> 
-      <hr>
-      <p>If you want to experiment the world itself, you can download the zip file to the world save. <b>Do keep in mind that the save will be the same shown in the world map above!</b>. Press the button below to download it from Google Drive.</p>
-      <br>
-      <p><a href="https://drive.google.com/file/d/1-84XpkSmOPwAQaj3d3H69xv8nbY9tcM6/view?usp=sharing" class="zip-button">pondeersmc.zip (483.9MB)</a>
+      <span style="font-size: 10px">Map made with <a href="https://bluemap.bluecolored.de/" target="_blank">BlueMap</a>, Copyright (c) <a href="https://bluecolored.de" target="_blank">Blue</a> under MIT License.</span>
+      <h3>Note</h3>
+      <p>
+      If you are experiencing lag on the map itself, <b>it is required to enable Hardware Acceleration on your broswer settings</b>. Notify Hansel (tardio) for info :)
       </p>
-      <br>
-      <p>If you really need the most RECENT save (currently: {new Date().getMonth() + 1} / {new Date().getDate()} / {new Date().getFullYear()}), notify Hansel for that since he is the server admin! Might take some time, since it is a large file.</p>
       <hr>
       <h2>Request your location be set on the map!</h2>
       <form method="post" data-netlify="true" name="requestLocation">
